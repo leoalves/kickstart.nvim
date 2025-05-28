@@ -110,6 +110,31 @@ vim.o.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
+-- custom ident
+vim.o.numberwidth = 1
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+vim.o.shiftround = true
+vim.o.mouse = 'a'
+vim.o.wrap = true
+vim.o.signcolumn = 'yes'
+vim.opt.smartindent = true
+vim.opt.wrap = true
+vim.o.foldlevel = 99
+vim.o.foldmethod = 'indent'
+vim.o.foldenable = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
+vim.opt.scrolloff = 8
+vim.opt.updatetime = 50
+vim.opt.autoread = true
+vim.opt.exrc = true
+vim.opt.secure = true
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -995,7 +1020,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
